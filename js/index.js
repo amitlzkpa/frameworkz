@@ -1,14 +1,14 @@
+async function onBtnClick_Abt() {
+  let aboutDiv = document.getElementById("about-div");
+  aboutDiv.classList.toggle("fadeIn");
+  aboutDiv.classList.toggle("fadeOut");
+}
+
 async function main() {
-  console.log("foo");
   let btnAbt = document.getElementById("btn-about");
-  console.log(btnAbt);
   btnAbt.addEventListener(
     "click",
-    async function () {
-      let temp = document.getElementsByTagName("template")[0];
-      let clon = temp.content.cloneNode(true);
-      document.body.appendChild(clon);
-    },
+    onBtnClick_Abt,
     false
   );
 }
