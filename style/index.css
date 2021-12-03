@@ -45,7 +45,7 @@ header {
 
 main {
   padding: 8px;
-  background: url("/images/stock/nastuh-abootalebi-eHD8Y1Znfpk-unsplash.jpg")
+  background: url("images/stock/nastuh-abootalebi-eHD8Y1Znfpk-unsplash.jpg")
     no-repeat center center fixed;
   background-size: cover;
   border: 1px solid var(--debug-border-color);
