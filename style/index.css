@@ -39,6 +39,11 @@ header {
 
 .navbar-menu-item {
   margin: 0px 4px 0px 4px;
+  cursor: pointer;
+}
+
+.navbar-menu-item:hover {
+  color: #838383;
 }
 
 /* CONTENT */
