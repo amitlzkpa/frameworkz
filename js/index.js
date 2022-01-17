@@ -14,6 +14,10 @@ async function onBtnClick_Abt() {
   targetNode.appendChild(node_AbtCont);
 }
 
+async function onBtnClick_Hamburger() {
+  console.log("foo");
+}
+
 async function main() {
   onBtnClick_Landing();
   // onBtnClick_Abt();
@@ -23,7 +27,11 @@ async function main() {
     .addEventListener("click", onBtnClick_Landing, false);
 
   document
-    .querySelector("#btn-about")
+    .querySelector("#navbar-list-menu-anchor")
+    .addEventListener("click", onBtnClick_Hamburger, false);
+
+  document
+    .querySelector(".btn-about")
     .addEventListener("click", onBtnClick_Abt, false);
 }
 
