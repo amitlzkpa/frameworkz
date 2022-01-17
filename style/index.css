@@ -19,6 +19,7 @@ article {
 /* NAVBAR */
 
 header {
+  min-height: 2rem;
   padding: 1rem;
   background-color: white;
 }
@@ -34,12 +35,12 @@ header {
   cursor: pointer;
 }
 
-.navbar-menu-item {
+.navbar-top-menu-item {
   margin: 0rem 1rem 0rem 1rem;
   cursor: pointer;
 }
 
-.navbar-menu-item:hover {
+.navbar-top-menu-item:hover {
   color: #838383;
 }
 
@@ -54,7 +55,7 @@ header {
     display: inline-block;
   }
 
-  #navbar-list-menu-anchor {
+  #navbar-list-menu-container {
     display: none;
   }
 }
@@ -64,9 +65,33 @@ header {
     display: none;
   }
 
-  #navbar-list-menu-anchor {
+  #navbar-list-menu-container {
     display: inline-block;
   }
+}
+
+#navbar-list-menu-modal {
+  position: fixed;
+  top: 8rem;
+  left: 2rem;
+  right: 2rem;
+  height: 40%;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+}
+
+.navbar-list-menu-item {
+  margin: 1rem 0rem 1rem 0rem;
+  text-align: center;
+  cursor: pointer;
+  font-size: 2em;
+}
+
+.navbar-list-menu-item:hover {
+  color: #838383;
 }
 
 /* CONTENT */
@@ -117,6 +142,12 @@ main {
   column-count: 2;
   text-align: left;
   margin: 0rem 2rem 0rem 2rem;
+}
+
+@media (max-width: 800px) {
+  #about-long-text {
+    column-count: 1;
+  }
 }
 
 /* FOOTER */
