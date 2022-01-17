@@ -1,17 +1,16 @@
 async function onBtnClick_Landing() {
-  let temp_MainCont = document.querySelector("#content-landing");
-  let node_MainCont = temp_MainCont.content.cloneNode(true);
-  let targetNode = document.querySelector("#active-content-target-container");
+  let targetNode = document.querySelector("#active-modal-container");
   targetNode.innerHTML = "";
-  targetNode.appendChild(node_MainCont);
+  targetNode.className = "hidden";
 }
 
 async function onBtnClick_Abt() {
   let temp_AbtCont = document.querySelector("#content-about");
   let node_AbtCont = temp_AbtCont.content.cloneNode(true);
-  let targetNode = document.querySelector("#active-content-target-container");
+  let targetNode = document.querySelector("#active-modal-container");
   targetNode.innerHTML = "";
   targetNode.appendChild(node_AbtCont);
+  targetNode.className = "visible";
 }
 
 async function onBtnClick_Hamburger() {
@@ -36,6 +35,8 @@ async function main() {
   document
     .querySelectorAll(".btn-about")
     .forEach((btn) => btn.addEventListener("click", onBtnClick_Abt, false));
+
+  // document.addEventListener("click", onBtnClick_Landing, false);
 }
 
 window.addEventListener("load", (event) => {

@@ -1,3 +1,20 @@
+
+/* UTILS */
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 700ms linear;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 700ms, opacity 700ms linear;
+}
+
+/* PAGE LEVEL */
+
 :root {}
 
 html,
@@ -78,9 +95,11 @@ header {
   height: 40%;
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.1rem;
   display: flex;
   visibility: hidden;
   flex-direction: column;
+  z-index: 999999;
 }
 
 .navbar-list-menu-item {
@@ -100,6 +119,19 @@ main {
   min-height: 100%;
 }
 
+#active-modal-container {
+  position: fixed;
+  padding: 1rem;
+  top: 8rem;
+  left: 2rem;
+  right: 2rem;
+  bottom: 6rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.1rem;
+}
+
 #landing-slideshow {
   padding: 1rem;
   background: url("../images/stock/nastuh-abootalebi-eHD8Y1Znfpk-unsplash.jpg")
@@ -117,19 +149,22 @@ main {
   font-family: "Arvo", serif;
 }
 
+/* ABOUT */
+
 .centering-container {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 #about-div {
   background-color: rgba(255, 255, 255, 0.8);
-  width: 70%;
-  margin-top: 4%;
-  padding: 2rem;
   border-radius: 0.1rem;
+  width: 70%;
+  margin: 2rem 0rem 2rem 0rem;
+  padding: 2rem;
   font-size: 1.4rem;
   text-align: center;
 }
@@ -196,6 +231,12 @@ footer {
   padding: 2rem;
 }
 
+@media (max-width: 800px) {
+  .tl__item {
+    flex-direction: column;
+  }
+}
+
 .tl__circle {
   width: 6rem;
   height: 6rem;
@@ -212,7 +253,12 @@ footer {
 
 .tl__text {
   text-align: left;
-  padding-left: 1rem;
+}
+
+@media (max-width: 800px) {
+  .tl__text {
+    text-align: center;
+  }
 }
 
 @media (max-width: 800px) {
