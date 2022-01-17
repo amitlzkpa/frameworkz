@@ -15,6 +15,16 @@ async function onBtnClick_Abt() {
   targetNode.classList.add("visible");
 }
 
+async function onBtnClick_Svcs() {
+  let temp_SvcsCont = document.querySelector("#content-services");
+  let node_SvcsCont = temp_SvcsCont.content.cloneNode(true);
+  let targetNode = document.querySelector("#active-modal-container");
+  targetNode.innerHTML = "";
+  targetNode.appendChild(node_SvcsCont);
+  targetNode.classList.remove("hidden");
+  targetNode.classList.add("visible");
+}
+
 async function onBtnClick_Hamburger() {
   let menu_Modal = document.querySelector("#navbar-list-menu-modal");
   let isInView =
@@ -45,6 +55,10 @@ async function main() {
   document
     .querySelectorAll(".btn-about")
     .forEach((btn) => btn.addEventListener("click", onBtnClick_Abt, false));
+
+  document
+    .querySelectorAll(".btn-services")
+    .forEach((btn) => btn.addEventListener("click", onBtnClick_Svcs, false));
 
   document.addEventListener("click", onClk_Anywhere, true);
 }

@@ -130,6 +130,10 @@ main {
   overflow-y: auto;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 0.1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #landing-slideshow {
@@ -151,15 +155,10 @@ main {
 
 /* ABOUT */
 
-.centering-container {
-  width: 100%;
-  height: 100%;
+#about-div {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-#about-div {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 0.1rem;
   width: 70%;
@@ -183,6 +182,21 @@ main {
   #about-long-text {
     column-count: 1;
   }
+}
+
+/* SERVICES */
+
+#services-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.1rem;
+  width: 70%;
+  margin: 2rem 0rem 2rem 0rem;
+  padding: 2rem;
+  font-size: 1.4rem;
+  text-align: center;
 }
 
 /* FOOTER */
