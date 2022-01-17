@@ -16,6 +16,7 @@ async function onBtnClick_Abt() {
 
 async function main() {
   onBtnClick_Landing();
+  // onBtnClick_Abt();
 
   document
     .querySelector("#navbar-logo")
