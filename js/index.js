@@ -6,6 +6,7 @@ async function closeAllModals() {
 }
 
 async function onBtnClick_Abt() {
+  console.log("poo");
   let temp_AbtCont = document.querySelector("#content-about");
   let node_AbtCont = temp_AbtCont.content.cloneNode(true);
   let targetNode = document.querySelector("#active-modal-container");
@@ -21,6 +22,16 @@ async function onBtnClick_Svcs() {
   let targetNode = document.querySelector("#active-modal-container");
   targetNode.innerHTML = "";
   targetNode.appendChild(node_SvcsCont);
+  targetNode.classList.remove("hidden");
+  targetNode.classList.add("visible");
+}
+
+async function onBtnClick_Contact() {
+  let temp_CntcCont = document.querySelector("#content-contact");
+  let node_CntcCont = temp_CntcCont.content.cloneNode(true);
+  let targetNode = document.querySelector("#active-modal-container");
+  targetNode.innerHTML = "";
+  targetNode.appendChild(node_CntcCont);
   targetNode.classList.remove("hidden");
   targetNode.classList.add("visible");
 }
@@ -59,6 +70,10 @@ async function main() {
   document
     .querySelectorAll(".btn-services")
     .forEach((btn) => btn.addEventListener("click", onBtnClick_Svcs, false));
+
+  document
+    .querySelectorAll(".btn-contact")
+    .forEach((btn) => btn.addEventListener("click", onBtnClick_Contact, false));
 
   document.addEventListener("click", onClk_Anywhere, true);
 }

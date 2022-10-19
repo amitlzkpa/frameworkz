@@ -1,4 +1,3 @@
-
 /* UTILS */
 
 .visible {
@@ -15,7 +14,8 @@
 
 /* PAGE LEVEL */
 
-:root {}
+:root {
+}
 
 html,
 body {
@@ -189,14 +189,14 @@ main {
 #services-div {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 0.1rem;
   width: 70%;
   margin: 2rem 0rem 2rem 0rem;
   padding: 2rem;
   font-size: 1.4rem;
-  text-align: center;
+  text-align: left;
 }
 
 /* FOOTER */
@@ -225,9 +225,23 @@ footer {
 @media (max-width: 800px) {
   #footer-item-list {
     flex-direction: column;
-  } 
+  }
 }
 
+/* CONTACT */
+
+#contact-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.1rem;
+  width: 70%;
+  margin: 2rem 0rem 2rem 0rem;
+  padding: 2rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
 
 /* TIMELINE */
 #timeline-container {
